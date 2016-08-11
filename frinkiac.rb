@@ -1,14 +1,4 @@
 require 'HTTParty'
-require 'pry'
-
-random_frink = "https://frinkiac.com/api/random"
-# need to parse this response for
-## response[“Frame”][“Episode”]
-## response[“Frame”][“Timestamp”]
-
-#frink_image_url = "https://frinkiac.com/img/#{episode}/#{timestamp}.jpg"
-
-
 
 class RandomFrinkJson #generate a random json
   attr_reader :frinkjson
@@ -45,16 +35,3 @@ class FrinkImages
   end
 
 end
-
-c =  RandomFrinkImage.new(
-  :data => RandomFrinkJson.new.frinkjson)
-binding.pry
-
-# class FrinkImage # parse ye ol ruby image
-#
-# UrlVariables = Struct.new(:episode, :timestamp)
-#   def urlify(data)
-#     data.collect {|cell|
-#       UrlVariables.new(cell["Frame"]["Episode"],cell["Frame"]["Timestamp"])}
-#   end
-# end
