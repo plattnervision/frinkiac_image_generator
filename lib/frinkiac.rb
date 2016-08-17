@@ -28,10 +28,3 @@ class RandomFrinkImage # generate image url
       UrlVariables.new(data["Frame"]["Episode"],data["Frame"]["Timestamp"])
   end
 end
-
-class FrinkImages
-  attr_reader :frink_image_url
-  def initialize(args)
-  end
-
-end
